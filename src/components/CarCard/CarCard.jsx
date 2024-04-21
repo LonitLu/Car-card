@@ -12,8 +12,10 @@ export const CarCard = () => {
     setDescription((isDescription) => !isDescription);
   }
 
-  let arrowClass = isDescription ? "rotate-1" : null;
-  let aDescriptionClass = isDescription ? "-translate-x-[1px]" : null;
+  let arrowClass = isDescription ? "rotate-0" : "rotate-180";
+  let aDescriptionClass = isDescription
+    ? "-translate-x-[0px]"
+    : "-translate-x-[520px]";
 
   return (
     <>
@@ -22,7 +24,7 @@ export const CarCard = () => {
           <div className="bg-yellow-1 w-8 sm:w-[70px] h-full pt-16 pl-2 sm:pl-4">
             <div
               onClick={handleClick}
-              className={`w-[50px] sm:w-[110px] h-[50px] sm:h-[110px] bg-yellow-1 flex justify-center items-center rounded-full outline outline-1 outline-white outline-offset-[-10px] sm:outline-offset-[-19px] cursor-pointer rotate-180 duration-500 ease-in-out delay-100 ${arrowClass}`}
+              className={`w-[50px] sm:w-[110px] h-[50px] sm:h-[110px] bg-yellow-1 flex justify-center items-center rounded-full outline outline-1 outline-white outline-offset-[-10px] sm:outline-offset-[-19px] cursor-pointer  duration-500 ease-in-out delay-100 ${arrowClass}`}
             >
               <img
                 className=" h-[20px] sm:h-[40px] w-[20px] sm:w-[40px] "
@@ -33,7 +35,7 @@ export const CarCard = () => {
           </div>
         </div>
         <div
-          className={`sm:max-w-[402px] sm:w-full pt-3 absolute z-30 ml-16 sm:ml-36 -translate-x-[520px] duration-500 ease-in-out delay-100 ${aDescriptionClass}`}
+          className={`sm:max-w-[402px] sm:w-full pt-3 absolute z-30 ml-16 sm:ml-36 duration-500 ease-in-out delay-100 ${aDescriptionClass}`}
         >
           <CardDescription />
           <CardPrice />
