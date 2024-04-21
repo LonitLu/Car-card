@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"), url("./fonts/GilroyBold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "GilroyMedium";
+  src: local("GilroyMedium"), url("./fonts/GilroyMedium.ttf") format("truetype");
+  font-weight: 400;
+}
+
+body {
+  @apply font-GilroyMedium text-sm md:text-xl bg-[#f6f4f2];
+}

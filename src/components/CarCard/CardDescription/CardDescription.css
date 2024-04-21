@@ -1,0 +1,3 @@
+.list {
+  @apply flex justify-between border-b border-black/35 pb-2 mt-5
+}
